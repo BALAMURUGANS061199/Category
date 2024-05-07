@@ -75,4 +75,14 @@ router.post('/Upload', async (req, res) => {
     }
 });
 
+
+router.get('/GetCategory',async (req,res)=>{
+    try{
+const category = await CategoryModel.find()
+return res.status(200).json(category)
+    }
+    catch(err){
+
+    }
+})
 module.exports = router;
